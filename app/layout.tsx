@@ -10,24 +10,23 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Ajharul Islam Aunik | Software & Frontend Engineer",
+  title: "Ajharul Islam Aunik | Software Engineer",
   description:
     "Personal portfolio of Ajharul Islam Aunik, a Computer Science student at Wayne State College specializing in high-end frontend development and software engineering.",
   keywords: [
     "Ajharul Islam Aunik",
     "Software Engineer",
-    "Frontend Engineer",
     "Wayne State College",
     "Portfolio",
     "Next.js",
     "React",
   ],
   openGraph: {
-    title: "Ajharul Islam Aunik | Software & Frontend Engineer",
+    title: "Ajharul Islam Aunik | Software Engineer",
     description:
       "High-end personal portfolio exploring modern web experiences.",
     url: "https://aunik.dev",
-    siteName: "Aunik Portfolio",
+    siteName: "Aunik's Portfolio",
     locale: "en_US",
     type: "website",
   },

@@ -130,7 +130,7 @@ export default function Hero() {
         <div className="relative mb-8">
           <motion.h1
             style={{ y: y1, scale }}
-            className="text-7xl md:text-8xl font-black tracking-tighter leading-[0.8] relative"
+            className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.8] relative"
           >
             <div className="flex justify-center flex-wrap">
               {nameLetters.map((char, i) => (
@@ -195,34 +195,38 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 2.2 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
         >
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(59,130,246,0.4)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-5 bg-blue-600 text-white rounded-full font-bold transition-all overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              View Projects{" "}
-              <Rocket
-                size={20}
-                className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-              />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </motion.button>
+          <a href="#projects">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(59,130,246,0.4)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="group relative px-10 py-5 bg-blue-600 text-white rounded-full font-bold transition-all overflow-hidden w-full sm:w-auto"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                View Projects{" "}
+                <Rocket
+                  size={20}
+                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </motion.button>
+          </a>
 
-          <motion.button
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "rgba(255,255,255,0.1)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 glass rounded-full font-bold transition-all border border-white/20 flex items-center gap-2"
-          >
-            Contact Me <Globe size={20} />
-          </motion.button>
+          <a href="#contact">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "rgba(255,255,255,0.1)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="px-10 py-5 glass rounded-full font-bold transition-all border border-white/20 flex items-center gap-2 w-full sm:w-auto"
+            >
+              Contact Me <Globe size={20} />
+            </motion.button>
+          </a>
         </motion.div>
 
         {/* Code IDE Integration with Parallax */}

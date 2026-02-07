@@ -103,9 +103,22 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex gap-4 pt-4 border-t border-border">
-              <Github className="w-6 h-6" />
-              <Linkedin className="w-6 h-6" />
-              <Twitter className="w-6 h-6" />
+              <a
+                href="https://github.com/ajauni01"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ajharul-islam-aunik"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </motion.div>
         )}
