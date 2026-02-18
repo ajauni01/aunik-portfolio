@@ -4,7 +4,14 @@ import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import CodeIDE from "@/app/components/CodeIDE";
 import HeroBackground from "@/app/components/HeroBackground";
-import { Code2, Rocket, Globe, Cpu, Zap, Terminal } from "lucide-react";
+import {
+  Code2,
+  Rocket,
+  Database,
+  Cloud,
+  Terminal,
+  Layers,
+} from "lucide-react";
 
 const FloatingIcon = ({
   icon: Icon,
@@ -85,10 +92,8 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-[160vh] flex flex-col items-center justify-start overflow-hidden pt-40 pb-20"
     >
-      {/* 3D Background */}
       <HeroBackground />
 
-      {/* Interactive Spotlight */}
       <motion.div
         className="pointer-events-none absolute inset-0 z-10"
         style={{
@@ -99,11 +104,11 @@ export default function Hero() {
       {/* Floating Decorative Icons */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <FloatingIcon icon={Code2} initialX="15%" initialY="20%" delay={0} />
-        <FloatingIcon icon={Rocket} initialX="80%" initialY="15%" delay={1} />
-        <FloatingIcon icon={Globe} initialX="10%" initialY="70%" delay={2} />
-        <FloatingIcon icon={Cpu} initialX="85%" initialY="65%" delay={3} />
-        <FloatingIcon icon={Zap} initialX="25%" initialY="45%" delay={4} />
-        <FloatingIcon icon={Terminal} initialX="70%" initialY="40%" delay={5} />
+        <FloatingIcon icon={Database} initialX="80%" initialY="15%" delay={1} />
+        <FloatingIcon icon={Cloud} initialX="10%" initialY="70%" delay={2} />
+        <FloatingIcon icon={Layers} initialX="85%" initialY="65%" delay={3} />
+        <FloatingIcon icon={Terminal} initialX="70%" initialY="40%" delay={4} />
+        <FloatingIcon icon={Rocket} initialX="25%" initialY="45%" delay={5} />
       </div>
 
       <div className="container mx-auto px-6 relative z-20 text-center">
@@ -123,10 +128,10 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
           </span>
-          Computer Science Student @ Wayne State College
+          CS @ Wayne State • Software Engineer (.NET, C#, ASP.NET Core, React, Angular)
         </motion.div>
 
-        {/* Hero Title with Staggered Letters */}
+        {/* Hero Title */}
         <div className="relative mb-8">
           <motion.h1
             style={{ y: y1, scale }}
@@ -170,25 +175,25 @@ export default function Hero() {
             </div>
           </motion.h1>
 
-          {/* Glowing Background for Title */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/5 blur-[120px] rounded-full -z-10 pointer-events-none" />
         </div>
 
-        {/* Subtitle with reveal animation */}
+        {/* Subtitle (Short + .NET-focused) */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2 }}
-          className="max-w-2xl mx-auto text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed font-light"
-        >
-          Crafting{" "}
-          <span className="text-white font-medium">high-performance</span>{" "}
-          digital products with{" "}
-          <span className="text-blue-400 font-mono">elegant code</span> and
-          <span className="text-emerald-400"> cutting-edge</span> engineering.
-        </motion.p>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 2 }}
+  className="max-w-2xl mx-auto text-lg md:text-2xl text-muted-foreground mb-12 leading-relaxed font-light"
+>
+  Building scalable{" "}
+  <span className="text-white font-medium">full-stack applications</span>{" "}
+  with <span className="text-blue-400 font-mono">C#/.NET</span>,{" "}
+  <span className="text-emerald-400">clean APIs</span>, and{" "}
+  <span className="text-blue-300">modern frontend experiences</span>
+</motion.p>
 
-        {/* Action Buttons with magnetic-like effect */}
+
+        {/* Buttons (Shorter labels) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -205,7 +210,7 @@ export default function Hero() {
               className="group relative px-10 py-5 bg-blue-600 text-white rounded-full font-bold transition-all overflow-hidden w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center gap-2">
-                View Projects{" "}
+                Projects{" "}
                 <Rocket
                   size={20}
                   className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
@@ -224,12 +229,12 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 glass rounded-full font-bold transition-all border border-white/20 flex items-center gap-2 w-full sm:w-auto"
             >
-              Contact Me <Globe size={20} />
+              Contact <Terminal size={20} />
             </motion.button>
           </a>
         </motion.div>
 
-        {/* Code IDE Integration with Parallax */}
+        {/* Code IDE */}
         <motion.div
           style={{ y: y2 }}
           initial={{ opacity: 0, scale: 0.9, y: 100 }}
@@ -238,9 +243,7 @@ export default function Hero() {
           className="relative mt-20"
         >
           <div className="relative group">
-            {/* Ambient glow behind IDE */}
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-3xl blur opacity-10 group-hover:opacity-20 transition duration-1000" />
-
             <CodeIDE />
           </div>
 
@@ -251,7 +254,7 @@ export default function Hero() {
           >
             <div className="flex items-center gap-3 text-xs font-black tracking-widest text-blue-400">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-              SYSTEM_ACTIVE_v3.0_STABLE
+              DOTNET_READY • SHIPPING_SOON
             </div>
           </motion.div>
         </motion.div>
@@ -266,7 +269,7 @@ export default function Hero() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
       >
         <span className="text-[10px] uppercase tracking-[0.5em] font-black text-blue-400/50">
-          Initialize Scroll
+          Scroll
         </span>
         <div className="relative w-1 h-20 bg-white/5 rounded-full overflow-hidden">
           <motion.div

@@ -18,8 +18,8 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            animate={isInView ? { opacity: 2, x: 0 } : {}}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-8">
               Engineering <span className="text-blue-500">Digital</span>{" "}
@@ -57,7 +57,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="relative"
           >
             <div className="aspect-square glass rounded-3xl overflow-hidden relative group">
@@ -73,7 +73,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> 
 
             {/* Abstract decorative elements */}
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/10 blur-3xl" />

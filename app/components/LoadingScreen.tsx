@@ -9,7 +9,7 @@ export default function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 50);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +39,7 @@ export default function LoadingScreen() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="mt-6 text-xs uppercase tracking-[0.4em] font-medium text-muted-foreground"
           >
-            Aunik Portfolio <span className="text-blue-500">2026</span>
+            Aunik's Portfolio <span className="text-blue-500">2026</span>
           </motion.div>
         </motion.div>
       )}
