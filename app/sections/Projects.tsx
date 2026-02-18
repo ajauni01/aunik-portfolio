@@ -68,7 +68,9 @@ export default function Projects() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
           >
             <a
-              href="#"
+              href="https://github.com/ajauni01"
+              target="_blank"
+              rel="noreferrer"
               className="text-blue-500 font-medium hover:underline flex items-center gap-2"
             >
               View All Github <ExternalLink className="w-4 h-4" />

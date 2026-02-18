@@ -194,45 +194,80 @@ export default function Hero() {
 
 
         {/* Buttons (Shorter labels) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
-        >
-          <a href="#projects">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(59,130,246,0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-10 py-5 bg-blue-600 text-white rounded-full font-bold transition-all overflow-hidden w-full sm:w-auto"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Projects{" "}
-                <Rocket
-                  size={20}
-                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </motion.button>
-          </a>
+       <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 2.2 }}
+  className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
+>
+  {/* Projects (Secondary) */}
+  <a href="#projects" className="w-full sm:w-auto">
+    <motion.button
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0 0 30px rgba(59,130,246,0.35)",
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="group relative px-10 py-5 rounded-full font-bold transition-all overflow-hidden w-full sm:w-auto text-white"
+    >
+      <div className="absolute inset-0 bg-blue-600 opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/15 via-white/0 to-white/15 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <span className="relative z-10 flex items-center gap-2">
+        Projects
+        <Rocket
+          size={20}
+          className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+        />
+      </span>
+    </motion.button>
+  </a>
 
-          <a href="#contact">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "rgba(255,255,255,0.1)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 glass rounded-full font-bold transition-all border border-white/20 flex items-center gap-2 w-full sm:w-auto"
-            >
-              Contact <Terminal size={20} />
-            </motion.button>
-          </a>
-        </motion.div>
+  {/* Resume (PRIMARY) — stands out */}
+  <a
+    href="/resume.pdf"
+    download="Ajharul_Islam_Aunik_Resume.pdf"
+    className="w-full sm:w-auto"
+  >
+    <motion.button
+      whileHover={{
+        scale: 1.06,
+        boxShadow: "0 0 40px rgba(16,185,129,0.45)",
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="group relative px-10 py-5 rounded-full font-extrabold transition-all overflow-hidden w-full sm:w-auto text-white"
+    >
+      {/* Emerald/teal “hire me” vibe */}
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-white/0 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      <span className="relative z-10 flex items-center gap-2">
+        Resume
+        <Terminal
+          size={20}
+          className="group-hover:translate-y-[-2px] group-hover:rotate-[-6deg] transition-transform"
+        />
+      </span>
+    </motion.button>
+  </a>
+
+  {/* Contact (Tertiary) — outline/glass */}
+  <a href="#contact" className="w-full sm:w-auto">
+    <motion.button
+      whileHover={{
+        scale: 1.05,
+        backgroundColor: "rgba(255,255,255,0.08)",
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="px-10 py-5 rounded-full font-bold transition-all w-full sm:w-auto
+                 border border-white/20 text-white/90 backdrop-blur-md bg-white/5
+                 hover:border-white/35 flex items-center justify-center gap-2"
+    >
+      Contact <Terminal size={20} />
+    </motion.button>
+  </a>
+</motion.div>
+
+
 
         {/* Code IDE */}
         <motion.div
