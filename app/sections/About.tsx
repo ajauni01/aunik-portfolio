@@ -51,7 +51,7 @@ export default function About() {
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div>
                   <h4 className="text-foreground font-bold text-2xl mb-1">2+</h4>
-                  <p className="text-sm">Years Building with C#</p>
+                  <p className="text-sm">Years of Coding Experience</p>
                 </div>
                 <div>
                   <h4 className="text-foreground font-bold text-2xl mb-1">10+</h4>

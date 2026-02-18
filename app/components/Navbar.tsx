@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/app/lib/utils";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { name: "About", href: "#about" },
@@ -54,6 +55,7 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
           <div className="flex items-center gap-4 ml-4 border-l border-border pl-6">
             <a
               href="https://github.com/ajauni01"
@@ -102,6 +104,7 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle mobile />
             <div className="flex gap-4 pt-4 border-t border-border">
               <a
                 href="https://github.com/ajauni01"

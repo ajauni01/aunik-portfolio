@@ -38,7 +38,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var savedTheme = localStorage.getItem("theme");
+                  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+                  var theme = savedTheme === "light" || savedTheme === "dark"
+                    ? savedTheme
+                    : (prefersDark ? "dark" : "light");
+                  document.documentElement.classList.toggle("dark", theme === "dark");
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${outfit.variable} font-sans antialiased text-foreground bg-background`}
       >

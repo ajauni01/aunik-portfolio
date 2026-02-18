@@ -51,7 +51,7 @@ export default function Skills() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground"
           >
-            Full-stack .NET tools I use to ship clean, scalable applications.
+            Full-stack .NET tools I use to ship clean, scalable applications
           </motion.p>
         </div>
 
