@@ -88,7 +88,7 @@ export default function Experience() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.80}}
             className="text-muted-foreground max-w-2xl mx-auto"
           >
             Professional impact + strong co-curricular leadership—built for teams
@@ -101,8 +101,9 @@ export default function Experience() {
             <motion.div
               key={`${event.title}-${event.role}-${event.date}`}
               initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.50, 1] }}
               className="relative mb-12 last:mb-0 pl-16 md:pl-0"
             >
               {/* Timeline line */}

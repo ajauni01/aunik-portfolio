@@ -1,13 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer className="py-12 border-t border-border/50">
       <div className="container mx-auto px-6">
@@ -23,30 +18,26 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
+
             <a
-              href="#"
-              className="p-3 glass rounded-full hover:bg-blue-500 hover:text-white transition-all"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/ajharul-islam-aunik/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               className="p-3 glass rounded-full hover:bg-blue-500 hover:text-white transition-all"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://github.com/ajauni01"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
               className="p-3 glass rounded-full hover:bg-blue-500 hover:text-white transition-all"
             >
-              <Twitter className="w-5 h-5" />
+              <Github className="w-5 h-5" />
             </a>
-            <button
-              onClick={scrollToTop}
-              className="p-3 glass rounded-full hover:bg-blue-500 hover:text-white transition-all"
-            >
-              <ArrowUp className="w-5 h-5" />
-            </button>
+            
           </div>
 
           <div className="text-muted-foreground text-sm flex gap-6">
