@@ -17,15 +17,10 @@ export default function ThemeToggle({ mobile = false }: { mobile?: boolean }) {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
-    const preferredDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
     const nextTheme: Theme =
       saved === "light" || saved === "dark"
         ? (saved as Theme)
-        : preferredDark
-          ? "dark"
-          : "light";
+        : "dark";
 
     setTheme(nextTheme);
     applyTheme(nextTheme);
