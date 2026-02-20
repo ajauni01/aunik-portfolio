@@ -61,7 +61,7 @@ const events = [
   {
     type: "education",
     title: "Wayne State College",
-    role: "B.S. in Computer Science (Senior)",
+    role: "B.S. in Computer Science, Minor in Geospatial Technology",
     date: "2022 – Present",
     description:
       "Senior CS major focused on full-stack systems—building maintainable software with strong fundamentals, clean APIs, and modern UI engineering.",

@@ -112,8 +112,8 @@ export default function Projects() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* Hover actions */}
-                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                {/* Always-visible actions with hover-enhanced overlay */}
+                <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/20 to-transparent group-hover:from-black/80 group-hover:via-black/25 transition-all duration-500 flex items-end p-6">
                   <div className="flex gap-4">
                     <a
                       href={project.github}
