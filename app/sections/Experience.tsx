@@ -12,16 +12,16 @@ import {
 } from "lucide-react";
 
 const events = [
-  {
-    type: "work",
-    title: "Nucor Corporation (Vulcraft/Verco Group)",
-    role: "Incoming Software Development Intern",
-    date: "Summer 2026",
-    description:
-      "Selected to join Nucor to build production software—shipping measurable improvements with a strong engineering cadence and .NET-first mindset.",
-    icon: Briefcase,
-    highlight: true,
-  },
+  // {
+  //   type: "work",
+  //   title: "Nucor Corporation (Vulcraft/Verco Group)",
+  //   role: "Incoming Software Development Intern",
+  //   date: "Summer 2026",
+  //   description:
+  //     "Selected to join Nucor to build production software—shipping measurable improvements with a strong engineering cadence and .NET-first mindset.",
+  //   icon: Briefcase,
+  //   highlight: true,
+  // },
   {
     type: "work",
     title: "Wayne State College",
