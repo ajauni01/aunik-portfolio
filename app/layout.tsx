@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Wayne State College",
     "Portfolio",
     "Next.js",
-    "React",
+    "React/Angular",
   ],
   openGraph: {
     title: "Ajharul Islam Aunik | Software Engineer",
