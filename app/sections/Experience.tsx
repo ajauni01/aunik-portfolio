@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -11,7 +12,17 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const events = [
+type TimelineEvent = {
+  type: string;
+  title: string;
+  role: string;
+  date: string;
+  description: string;
+  icon: React.ForwardRefExoticComponent<React.SVGProps<SVGSVGElement>>;
+  highlight?: boolean;
+};
+
+const events: TimelineEvent[] = [
   // {
   //   type: "work",
   //   title: "Nucor Corporation (Vulcraft/Verco Group)",
